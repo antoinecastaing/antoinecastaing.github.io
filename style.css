@@ -23,9 +23,28 @@ body {
     margin-bottom: 1rem;
 }
 
-button {
+#button-and-counter {
+    display: flex;
     margin-top: 1rem;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    justify-content: space-between;
+    width: 200px;
+}
+
+button {
     padding: 1rem 2rem;
     font-size: large;
     border-radius: 25px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+button:hover {
+    transition: 500ms;
+    cursor: pointer;
+    background: white;
+    color: #24262A;
 }

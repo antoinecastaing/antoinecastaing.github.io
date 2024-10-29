@@ -55,8 +55,8 @@ const deck_container = document.getElementById('deck_container');
 const card = document.createElement('img');
 card.src = `./assets/cards_svg/card_back.svg`;
 deck_container.appendChild(card)
-
-
+const counter = document.getElementById('counter')
+let count = 0
 
 function shuffle_deck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
@@ -73,7 +73,7 @@ function display_deck() {
 
     shuffle_deck(deck);
 
-
+    count++;
     let i = 0;
 
     const intervalId = setInterval(() => {
@@ -83,8 +83,9 @@ function display_deck() {
         if (i > 52) {
             clearInterval(intervalId);
             card.src = `./assets/cards_svg/card_back.svg`;
+            counter.innerHTML = `${count}`;
         }
-    }, 500);
+    }, 1500);
 
 
 
